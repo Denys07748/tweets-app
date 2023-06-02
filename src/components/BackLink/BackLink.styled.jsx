@@ -12,6 +12,6 @@ export const StyledLink = styled(Link)`
   text-transform: uppercase;
 
   :hover {
-    color: #54c7a4;
+    color: #5cd3a8;
   }
 `;

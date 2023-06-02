@@ -11,12 +11,15 @@ import {
 import bgImg from 'images/picture2.png';
 import defaultAvatar from 'images/Hansel.png';
 import logo from 'images/Vector.png';
+import { useSelector } from 'react-redux';
+import { selectIsFollowing } from 'redax/selectors';
 // import { useDispatch } from 'react-redux';
 
 const CardListItem = ({
   id,
   card: { tweets, followers, avatar = defaultAvatar },
 }) => {
+  const isFollowing = useSelector(selectIsFollowing);
   // const dispatch = useDispatch();
 
   return (
@@ -24,16 +27,14 @@ const CardListItem = ({
       <Logo src={logo} alt="logo" />
       <BgPicture img={bgImg} />
       <Line />
-      <Avatar>
-        <img src={avatar} alt="user photo" />
-      </Avatar>
+      <Avatar>{/* <img src={avatar} alt="user photo" /> */}</Avatar>
       <CardInfo>
         <p>{tweets} TWEETS</p>
         <p>{followers.toLocaleString('en-US')} FOLLOWERS</p>
         <Button
           type="button"
           isFollowing={isFollowing}
-          onClick={hendleOnFollowing}
+          //   onClick={hendleOnFollowing}
         >
           {isFollowing ? 'FOLLOWING' : 'FOLLOW'}
         </Button>

@@ -41,6 +41,16 @@ export const BgPicture = styled.div`
   background-image: ${({ img }) => `url(${img})`};
 `;
 
+export const Avatar = styled.div`
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  left: 150px;
+  top: 178px;
+
+  border-radius: 85.9232px;
+`;
+
 export const CardInfo = styled.div`
   display: flex;
   flex-direction: column;
