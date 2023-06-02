@@ -1,16 +1,20 @@
-export const App = () => {
+import { Route, Routes } from 'react-router-dom';
+import Layout from 'components/Layout/Layout';
+import { lazy } from 'react';
+
+const HomePage = lazy(() => import('pages/HomePage'));
+const TweetsPage = lazy(() => import('pages/TweetsPage'));
+
+const App = () => {
   return (
-    <div
-      style={{
-        height: '100vh',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        fontSize: 40,
-        color: '#010101',
-      }}
-    >
-      Welcome to the Tweets App
-    </div>
+    <Routes>
+      <Route path="/" element={<Layout />}>
+        <Route index element={<HomePage />} />
+        <Route path="tweets" element={<TweetsPage />} />
+        <Route path="*" element={<HomePage />} />
+      </Route>
+    </Routes>
   );
 };
+
+export default App;
