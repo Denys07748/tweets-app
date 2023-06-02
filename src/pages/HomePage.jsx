@@ -1,7 +1,7 @@
 const HomePage = () => {
   return (
     <main>
-      <h1>Welcome</h1>
+      <h1>Welcome to Tweets App</h1>
     </main>
   );
 };
