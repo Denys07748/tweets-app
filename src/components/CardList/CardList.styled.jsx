@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
 
-export const CardList = styled.ul`
+export const CardListEl = styled.ul`
   display: flex;
   gap: 48px;
   flex-wrap: wrap;
