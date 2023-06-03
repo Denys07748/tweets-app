@@ -1,30 +1,31 @@
 import BackLink from 'components/BackLink/BackLink';
+import Button from 'components/Button/Button';
 import CardList from 'components/CardList/CardList';
 import Loader from 'components/Loader/Loader';
 import { useEffect, useState } from 'react';
+// import { toast } from 'react-toastify';
 import * as API from 'services/apiService';
 
 const TweetsPage = () => {
   const [tweets, setTweets] = useState([]);
-  const [page, setPage] = useState(1);
+  const [page, setPage] = useState(0);
+  const [currentTweetsLength, setCurrentTweetsLength] = useState(0);
   const [isLoading, setIsLoading] = useState(false);
   const [, setError] = useState('');
 
   useEffect(() => {
-    getTweets();
-  }, []);
+    getTweets(page);
+  }, [page]);
 
-  const getTweets = async () => {
+  const getTweets = async page => {
     setIsLoading(true);
     try {
       const userData = await API.fetchTweets(page);
-      // if (userData.results.length === 0) {
-      //   return toast.error(
-      //     'Sorry, there are no images matching your search query. Please try again.'
-      //   );
-      // }
-
-      setTweets(userData);
+      if (page === 0) {
+        setPage(1);
+      }
+      setCurrentTweetsLength(userData.length);
+      setTweets(state => [...state, ...userData]);
     } catch (error) {
       setError(error);
     } finally {
@@ -32,11 +33,21 @@ const TweetsPage = () => {
     }
   };
 
+  const onLoadMore = () => {
+    setPage(state => state + 1);
+  };
+
   return (
     <>
       <BackLink to={'/'}>Back</BackLink>
-      <CardList cards={tweets} />
+      <CardList tweets={tweets} />
       {isLoading && <Loader />}
+      {!isLoading &&
+        (currentTweetsLength === 3 ? (
+          <Button onLoadMore={onLoadMore}>Load more</Button>
+        ) : (
+          <h3>You have reached the end of the list!</h3>
+        ))}
     </>
   );
 };

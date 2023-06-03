@@ -21,6 +21,26 @@ export const CardEl = styled.li`
   height: 460px;
   margin-top: 10px;
   margin-left: 10px;
+
+  p {
+    position: absolute;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    text-transform: uppercase;
+    color: #ebd8ff;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+`;
+
+export const TweetsInfo = styled.p`
+  top: 284px;
+`;
+
+export const FollowersInfo = styled.p`
+  top: 324px;
 `;
 
 export const Logo = styled.img`
@@ -48,16 +68,50 @@ export const Avatar = styled.div`
   left: 150px;
   top: 178px;
 
+  /* box-sizing: border-box; */
+
   border-radius: 85.9232px;
+  background: #ebd8ff;
+  box-shadow: 0px 4.39163px 4.39163px rgba(0, 0, 0, 0.06),
+    inset 0px -2.19582px 4.39163px #ae7be3,
+    inset 0px 4.39163px 3.29372px #fbf8ff;
+
+  div {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    width: 62px;
+    height: 62px;
+    left: 9.48px;
+    top: 9.42px;
+    /* left: 0px;
+    top: 0px;
+    /* box-sizing: border-box; */
+    /* 
+    background: #ebd8ff; */
+    /* box-shadow: 0px 4.39163px 4.39163px rgba(0, 0, 0, 0.06),
+      inset 0px -2.19582px 4.39163px #ae7be3,
+      inset 0px 4.39163px 3.29372px #fbf8ff; */
+    /* border-radius: 13.1749px; */
+    border-radius: 85.9232px;
+    overflow: hidden;
+  }
+
+  img {
+    position: absolute;
+    width: 62px;
+    height: 62px;
+    left: 0px;
+    top: 0px;
+  }
 `;
 
-export const CardInfo = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
-  gap: 16px;
-`;
+// export const CardInfo = styled.div`
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: center;
+//   text-align: center;
+//   gap: 16px;
 
 export const Line = styled.div`
   position: absolute;
@@ -85,12 +139,17 @@ export const Button = styled.button`
   left: 92px;
   top: 374px;
 
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 22px;
+  color: #373737;
+
   box-shadow: 0px 3.43693px 3.43693px rgba(0, 0, 0, 0.25);
   border-radius: 10.3108px;
 
-  background: ${({ isFollowing }) => (isFollowing ? '#ebd8ff' : '#5CD3A8')};
+  background: ${({ isFollowing }) => (isFollowing ? '#5CD3A8' : '#ebd8ff')};
 
   &:hover {
-    background: ${({ isFollowing }) => (isFollowing ? '#dcc3f8' : '#2ead7f')};
+    background: ${({ isFollowing }) => (isFollowing ? '#2ead7f' : '#dcc3f8')};
   }
 `;

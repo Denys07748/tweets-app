@@ -3,18 +3,12 @@
 import CardListItem from './CardListItem';
 import { CardListEl } from './CardList.styled';
 
-const CardList = ({cards}) => {
-  // const cards = useSelector(selectTweets);
-  // console.log(cards);
-
+const CardList = ({ tweets }) => {
   return (
     <CardListEl>
-      {cards.map(({ id, ...otherProps }) => (
-        <CardListItem key={id} id={id} card={otherProps} />
+      {tweets.map(({ id, ...otherProps }) => (
+        <CardListItem key={id} id={id} tweet={otherProps} />
       ))}
-      <div>
-        <h2>hello</h2>
-      </div>
     </CardListEl>
   );
 };
