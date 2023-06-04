@@ -7,21 +7,21 @@
 Tweets App дозволяє переглядати інформацію кількості твітів та підписників у
 деяких користувачів. Також можливо підписуватись та відписуватись від
 користувачів. При клікові на кнопку Follow - текст змінюється на Following.
-Також змінюється колір кнопки. А до кількості фоловерів додається і ваш. При
-оновленні сторінки кількіст фоловерів та стан кнопри залишається як до
+Також змінюється колір кнопки. А до кількості фоловерів додаєтесь і Ви. При
+оновленні сторінки кількіст фоловерів та стан кнопки залишається як до
 оновлення.
 
-(https://monosnap.com/file/J3LoTWBGk72OpGjuQINpvGkrj6yvSS)
+![Button 'Followin' & 'Follow'](https://monosnap.com/file/J3LoTWBGk72OpGjuQINpvGkrj6yvSS)
 
 У проекті є зручна навігація по сторінкам та кнопка "Back" яка повертає на
 домашню сторінку.
 
-(https://monosnap.com/file/7koqvNQoY5DM9brMAisHgnTFYJmRrQ)
+![Button 'Back'](https://monosnap.com/file/7koqvNQoY5DM9brMAisHgnTFYJmRrQ)
 
 Також працює пагінація. При натиснанні на кнопку "Load more" підзавантажуються
 іще три картки користувачів.
 
-(https://monosnap.com/file/tRCr6a9sJjNGtrMTEQWUCmE0Rg3qOC)
+![Button 'Load more'](https://monosnap.com/file/tRCr6a9sJjNGtrMTEQWUCmE0Rg3qOC)
 
 ## Встановлення
 

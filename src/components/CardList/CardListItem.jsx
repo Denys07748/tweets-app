@@ -18,13 +18,12 @@ import { toast } from 'react-toastify';
 
 const CardListItem = ({
   id,
-  tweet: { tweets, followers, avatar = defaultAvatar },
+  tweet: { user, tweets, followers, avatar = defaultAvatar },
 }) => {
   const [isFollowing, setIsFollowing] = useState(
     () => JSON.parse(localStorage.getItem(`isFollowing ${id}`)) ?? false
   );
   const [followingUser, setFollowingUser] = useState(followers);
-  // const [error, setError] = useState('');
 
   useEffect(() => {
     localStorage.setItem(`isFollowing ${id}`, JSON.stringify(isFollowing));
@@ -51,12 +50,11 @@ const CardListItem = ({
     }
     setIsFollowing(true);
     setFollowingUser(state => state + 1);
-    // isFollowing ? setIsFollowing(false) : setIsFollowing(true);
   };
 
   return (
     <CardEl>
-      <Logo src={logo} alt="logo" />
+      <Logo src={logo} alt={user} />
       <BgPicture img={bgImg} />
       <Line />
       <Avatar>

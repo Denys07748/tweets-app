@@ -11,7 +11,6 @@ const TweetsPage = () => {
   const [page, setPage] = useState(0);
   const [currentTweetsLength, setCurrentTweetsLength] = useState(0);
   const [isLoading, setIsLoading] = useState(false);
-  // const [error, setError] = useState('');
 
   useEffect(() => {
     getTweets(page);

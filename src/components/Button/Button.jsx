@@ -13,4 +13,5 @@ export default Button;
 
 Button.propTypes = {
   onLoadMore: PropTypes.func,
+  children: PropTypes.node.isRequired,
 };

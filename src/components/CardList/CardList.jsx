@@ -1,5 +1,3 @@
-// import { useSelector } from 'react-redux';
-// import { selectTweets } from 'redax/selectors';
 import CardListItem from './CardListItem';
 import { CardListEl } from './CardList.styled';
 
