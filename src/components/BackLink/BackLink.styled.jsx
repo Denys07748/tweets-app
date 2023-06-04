@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 
 export const StyledLink = styled(Link)`
   position: fixed;
+  z-index: 100;
   display: inline-flex;
   align-items: center;
   gap: 4px;
@@ -13,6 +14,6 @@ export const StyledLink = styled(Link)`
   text-transform: uppercase;
 
   :hover {
-    color: #471ca9;
+    color: white;
   }
 `;

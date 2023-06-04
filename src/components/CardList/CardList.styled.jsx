@@ -6,6 +6,7 @@ export const CardListEl = styled.ul`
   flex-wrap: wrap;
   justify-content: center;
   padding: 0;
+  padding-top: 40px;
 `;
 
 export const CardEl = styled.li`
