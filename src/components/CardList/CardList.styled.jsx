@@ -2,13 +2,16 @@ import styled from '@emotion/styled';
 
 export const CardListEl = styled.ul`
   display: flex;
-  gap: 48px;
+  gap: 30px;
   flex-wrap: wrap;
   justify-content: center;
+  padding: 0;
 `;
 
 export const CardEl = styled.li`
   position: relative;
+  display: flex;
+  justify-content: center;
   background: linear-gradient(
     114.99deg,
     #471ca9 -0.99%,
@@ -30,17 +33,17 @@ export const CardEl = styled.li`
     line-height: 24px;
     text-transform: uppercase;
     color: #ebd8ff;
-    left: 50%;
-    transform: translateX(-50%);
+    /* left: 50%;
+    transform: translateX(-50%); */
   }
 `;
 
 export const TweetsInfo = styled.p`
-  top: 284px;
+  top: 267px;
 `;
 
 export const FollowersInfo = styled.p`
-  top: 324px;
+  top: 307px;
 `;
 
 export const Logo = styled.img`
@@ -84,15 +87,6 @@ export const Avatar = styled.div`
     height: 62px;
     left: 9.48px;
     top: 9.42px;
-    /* left: 0px;
-    top: 0px;
-    /* box-sizing: border-box; */
-    /* 
-    background: #ebd8ff; */
-    /* box-shadow: 0px 4.39163px 4.39163px rgba(0, 0, 0, 0.06),
-      inset 0px -2.19582px 4.39163px #ae7be3,
-      inset 0px 4.39163px 3.29372px #fbf8ff; */
-    /* border-radius: 13.1749px; */
     border-radius: 85.9232px;
     overflow: hidden;
   }
@@ -105,13 +99,6 @@ export const Avatar = styled.div`
     top: 0px;
   }
 `;
-
-// export const CardInfo = styled.div`
-//   display: flex;
-//   flex-direction: column;
-//   justify-content: center;
-//   text-align: center;
-//   gap: 16px;
 
 export const Line = styled.div`
   position: absolute;

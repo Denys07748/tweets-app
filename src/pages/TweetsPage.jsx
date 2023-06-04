@@ -3,7 +3,7 @@ import Button from 'components/Button/Button';
 import CardList from 'components/CardList/CardList';
 import Loader from 'components/Loader/Loader';
 import { useEffect, useState } from 'react';
-// import { toast } from 'react-toastify';
+import { toast } from 'react-toastify';
 import * as API from 'services/apiService';
 
 const TweetsPage = () => {
@@ -11,7 +11,7 @@ const TweetsPage = () => {
   const [page, setPage] = useState(0);
   const [currentTweetsLength, setCurrentTweetsLength] = useState(0);
   const [isLoading, setIsLoading] = useState(false);
-  const [, setError] = useState('');
+  const [error, setError] = useState('');
 
   useEffect(() => {
     getTweets(page);
@@ -46,8 +46,12 @@ const TweetsPage = () => {
         (currentTweetsLength === 3 ? (
           <Button onLoadMore={onLoadMore}>Load more</Button>
         ) : (
-          <h3>You have reached the end of the list!</h3>
+          <h4>You have reached the end of the list!</h4>
         ))}
+      {error &&
+        toast.error(
+          'Oops, an error occurred while loading the page. Please try reloading the page'
+        )}
     </>
   );
 };

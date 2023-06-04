@@ -5,10 +5,10 @@ export const StyledLink = styled(Link)`
   display: inline-flex;
   align-items: center;
   gap: 4px;
-  padding: 8px 0;
+  padding: 8px 24px;
   color: black;
   text-decoration: none;
-  font-weight: 500;
+  font-weight: 400;
   text-transform: uppercase;
 
   :hover {
