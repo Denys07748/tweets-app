@@ -26,7 +26,7 @@ Tweets App дозволяє переглядати інформацію кіль
 ![Button 'Load more'](./assets/button_Load_more.png)
 
 Демо відео роботи застосунку можна переглянути за
-[посиланням](https://facebook.github.io/create-react-app/docs/getting-started)
+[посиланням](https://monosnap.com/file/6w9RmNlXWSICyQLMu6BhJZirBsHldX)
 
 ## Встановлення
 
