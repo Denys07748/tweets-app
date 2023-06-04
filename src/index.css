@@ -30,6 +30,7 @@ button {
   font-family: 'Montserrat';
   font-style: normal;
   font-weight: 600;
+  cursor: pointer;
 }
 
 ul {
