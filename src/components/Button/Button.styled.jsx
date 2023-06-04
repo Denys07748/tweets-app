@@ -6,7 +6,8 @@ export const ButtonEl = styled.button`
   justify-content: center;
   align-items: center;
   padding: 12px 25px;
-  margin: 50px auto;
+  margin: 60px auto;
+  transform: translateY(-20px);
 
   width: 170px;
   height: 40px;
@@ -25,9 +26,10 @@ export const ButtonEl = styled.button`
     background: #2ead7f;
   }
 
-  /* position: absolute;
-  width: 196px;
-  height: 50px;
-  left: 92px;
-  top: 374px; */
+  a {
+    text-decoration: none;
+    color: #373737;
+    font-size: 18px;
+    font-weight: 600;
+  }
 `;

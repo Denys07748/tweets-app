@@ -33,8 +33,6 @@ export const CardEl = styled.li`
     line-height: 24px;
     text-transform: uppercase;
     color: #ebd8ff;
-    /* left: 50%;
-    transform: translateX(-50%); */
   }
 `;
 
@@ -70,8 +68,6 @@ export const Avatar = styled.div`
   height: 80px;
   left: 150px;
   top: 178px;
-
-  /* box-sizing: border-box; */
 
   border-radius: 85.9232px;
   background: #ebd8ff;

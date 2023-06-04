@@ -35,7 +35,6 @@ const CardListItem = ({
       try {
         await API.changeFollowers(id, followingUser);
       } catch (error) {
-        console.log(error.message);
         if (error.response.status === 400) {
           toast.error('Sorry, something went wrong...');
         }

@@ -8,8 +8,17 @@ body {
   font-weight: 500;
   font-size: 20px;
   line-height: 24px;
+  color: #373737;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: rgb(253, 187, 45);
+  background: linear-gradient(
+    0deg,
+    rgba(253, 187, 45, 0.5046393557422969) 8%,
+    rgba(34, 193, 195, 1) 92%
+  );
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 code {
@@ -27,7 +36,6 @@ ul {
   list-style: none;
 }
 
-h1,
 h4 {
   display: flex;
   justify-content: center;

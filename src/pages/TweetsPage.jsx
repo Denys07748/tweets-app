@@ -11,7 +11,7 @@ const TweetsPage = () => {
   const [page, setPage] = useState(0);
   const [currentTweetsLength, setCurrentTweetsLength] = useState(0);
   const [isLoading, setIsLoading] = useState(false);
-  const [error, setError] = useState('');
+  // const [error, setError] = useState('');
 
   useEffect(() => {
     getTweets(page);
@@ -27,7 +27,12 @@ const TweetsPage = () => {
       setCurrentTweetsLength(userData.length);
       setTweets(state => [...state, ...userData]);
     } catch (error) {
-      setError(error);
+      console.log(error.message);
+      if (error.response.status === 400) {
+        toast.error(
+          'Oops, an error occurred while loading the page. Please try reloading the page'
+        );
+      }
     } finally {
       setIsLoading(false);
     }
@@ -43,15 +48,12 @@ const TweetsPage = () => {
       <CardList tweets={tweets} />
       {isLoading && <Loader />}
       {!isLoading &&
+        tweets.length > 0 &&
         (currentTweetsLength === 3 ? (
           <Button onLoadMore={onLoadMore}>Load more</Button>
         ) : (
           <h4>You have reached the end of the list!</h4>
         ))}
-      {error &&
-        toast.error(
-          'Oops, an error occurred while loading the page. Please try reloading the page'
-        )}
     </>
   );
 };

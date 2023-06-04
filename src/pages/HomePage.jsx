@@ -1,8 +1,26 @@
+import styled from '@emotion/styled';
+import Button from 'components/Button/Button';
+import { NavLink } from 'react-router-dom';
+
+const Main = styled.main`
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; */
+`;
+
 const HomePage = () => {
   return (
-    <main>
+    <Main>
       <h1>Welcome to Tweets App</h1>
-    </main>
+      <Button>
+        <NavLink to="/tweets">Tweets</NavLink>
+      </Button>
+    </Main>
   );
 };
 
