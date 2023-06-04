@@ -54,12 +54,12 @@ const CardListItem = ({
 
   return (
     <CardEl>
-      <Logo src={logo} alt={user} />
+      <Logo src={logo} alt="logo" />
       <BgPicture img={bgImg} />
       <Line />
       <Avatar>
         <div>
-          <img src={avatar} alt="user avatar" />
+          <img src={avatar} alt={user} title={user} />
         </div>
       </Avatar>
       <TweetsInfo>{tweets} Tweets</TweetsInfo>
