@@ -81,7 +81,7 @@ export default CardListItem;
 
 CardListItem.propTypes = {
   id: PropTypes.string.isRequired,
-  card: PropTypes.shape({
+  tweet: PropTypes.shape({
     user: PropTypes.string.isRequired,
     tweets: PropTypes.number.isRequired,
     followers: PropTypes.number.isRequired,

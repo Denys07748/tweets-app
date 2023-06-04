@@ -26,7 +26,6 @@ const TweetsPage = () => {
       setCurrentTweetsLength(userData.length);
       setTweets(state => [...state, ...userData]);
     } catch (error) {
-      console.log(error.message);
       if (error.response.status === 400) {
         toast.error(
           'Oops, an error occurred while loading the page. Please try reloading the page'
