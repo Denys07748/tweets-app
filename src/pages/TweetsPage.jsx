@@ -8,7 +8,7 @@ import * as API from 'services/apiService';
 
 const TweetsPage = () => {
   const [tweets, setTweets] = useState([]);
-  const [page, setPage] = useState(0);
+  const [page, setPage] = useState(1);
   const [currentTweetsLength, setCurrentTweetsLength] = useState(0);
   const [isLoading, setIsLoading] = useState(false);
 
@@ -20,9 +20,7 @@ const TweetsPage = () => {
     setIsLoading(true);
     try {
       const userData = await API.fetchTweets(page);
-      if (page === 0) {
-        setPage(1);
-      }
+
       setCurrentTweetsLength(userData.length);
       setTweets(state => [...state, ...userData]);
     } catch (error) {
@@ -41,7 +39,7 @@ const TweetsPage = () => {
   };
 
   return (
-    <>
+    <main>
       <BackLink to={'/'}>Back</BackLink>
       <CardList tweets={tweets} />
       {isLoading && <Loader />}
@@ -52,7 +50,7 @@ const TweetsPage = () => {
         ) : (
           <h4>You have reached the end of the list!</h4>
         ))}
-    </>
+    </main>
   );
 };
 
