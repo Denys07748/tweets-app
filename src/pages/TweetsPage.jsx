@@ -20,7 +20,6 @@ const TweetsPage = () => {
     setIsLoading(true);
     try {
       const userData = await API.fetchTweets(page);
-
       setCurrentTweetsLength(userData.length);
       setTweets(state => [...state, ...userData]);
     } catch (error) {
