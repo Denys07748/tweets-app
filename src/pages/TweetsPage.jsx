@@ -28,6 +28,11 @@ const TweetsPage = () => {
           'Oops, an error occurred while loading the page. Please try reloading the page'
         );
       }
+      if (error.response.status === 500) {
+        toast.error('Oops... Server error! Please try later!');
+      } else {
+        toast.error('Something went wrong!');
+      }
     } finally {
       setIsLoading(false);
     }

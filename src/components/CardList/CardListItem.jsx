@@ -35,7 +35,13 @@ const CardListItem = ({
         await API.changeFollowers(id, followingUser);
       } catch (error) {
         if (error.response.status === 400) {
-          toast.error('Sorry, something went wrong...');
+          toast.error('Sorry, something went wrong...Try again');
+        }
+        if (error.response.status === 500) {
+          toast.error('Oops... Server error! Please try later!', {
+            position: toast.POSITION.TOP_RIGHT,
+            theme: 'dark',
+          });
         }
       }
     };
